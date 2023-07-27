@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>项目演示</title>
+      <link href="/2023/06/20/resume/"/>
+      <url>/2023/06/20/resume/</url>
+      
+        <content type="html"><![CDATA[<h2 id="部分项目"><a href="#部分项目" class="headerlink" title="部分项目"></a>部分项目</h2><h3 id="大屏项目"><a href="#大屏项目" class="headerlink" title="大屏项目"></a>大屏项目</h3><ul><li><strong>功能介绍</strong>：多种 c3 动效，如呼吸灯、划线等；轮播，可点击可滑动；</li><li><strong>适用平台</strong>：终端触屏、浏览器</li><li><strong>涉及</strong>：<code>vue</code> <code>gulp</code> <code>swiper</code></li><li><strong>图片演示</strong>：<img src="/images/resume/swiper.png" alt="图片演示"></li></ul><h3 id="原生小程序项目"><a href="#原生小程序项目" class="headerlink" title="原生小程序项目"></a>原生小程序项目</h3><ul><li><strong>功能介绍</strong>：登录 新闻 视频 答题 个人中心几大模块</li><li><strong>适用平台</strong>：微信小程序</li><li><strong>涉及</strong>：<code>原生小程序</code></li><li><strong>图片演示</strong>：<img src="/images/resume/policeman.png" alt="图片演示"></li></ul><h3 id="uniapp-小程序项目"><a href="#uniapp-小程序项目" class="headerlink" title="uniapp 小程序项目"></a>uniapp 小程序项目</h3><ul><li><strong>功能介绍</strong>：登录 职位 赚钱 我的模块</li><li><strong>适用平台</strong>：微信小程序</li><li><strong>涉及</strong>：<code>原生小程序</code></li><li><strong>图片演示</strong>：<img src="/images/resume/uni.png" alt="图片演示"></li><li></li></ul><h3 id="体检小程序"><a href="#体检小程序" class="headerlink" title="体检小程序"></a>体检小程序</h3><ul><li><strong>功能介绍</strong>：预约 套餐售卖 等</li><li><strong>适用平台</strong>：微信小程序</li><li><strong>涉及</strong>：<code>原生小程序</code></li><li><strong>图片演示</strong>：<img src="/images/resume/tj.png" alt="图片演示"></li></ul><h3 id="门户系统-PC端"><a href="#门户系统-PC端" class="headerlink" title="门户系统 PC端"></a>门户系统 PC端</h3><ul><li><strong>功能介绍</strong>：政务办公网站</li><li><strong>适用平台</strong>：浏览器</li><li><strong>涉及</strong>：<code>ant-design-vue-pro</code> <code>vue3</code> <code>ts</code></li><li><strong>图片演示</strong>：<img src="/images/resume/hs.png" alt="图片演示"></li></ul><h3 id="招聘系统-PC端"><a href="#招聘系统-PC端" class="headerlink" title="招聘系统 PC端"></a>招聘系统 PC端</h3><ul><li><strong>功能介绍</strong>：登录 增删改查 表单 表格 文件上传下载 实时进度条 地图 拨号</li><li><strong>适用平台</strong>：浏览器</li><li><strong>涉及</strong>：<code>vue2</code> <code>element</code> <code>ruoyi</code> <code>websoket</code></li><li><strong>图片演示</strong>：<img src="/images/resume/zl.png" alt="图片演示"></li></ul><h3 id="工具类搭建"><a href="#工具类搭建" class="headerlink" title="工具类搭建"></a>工具类搭建</h3><ul><li><strong>功能介绍</strong>： element ui 二次开发；常用工具类开发；打包后可发布npm</li><li><strong>适用平台</strong>：通用</li><li><strong>涉及</strong>：<code>vue</code> <code>rollup</code> <code>jest</code></li><li><strong>图片演示</strong>：<img src="/images/resume/%E5%B7%A5%E5%85%B7.png" alt="图片演示"></li></ul><h3 id="博客网站"><a href="#博客网站" class="headerlink" title="博客网站"></a>博客网站</h3><ul><li><strong>功能介绍</strong> 写博客</li><li><strong>适用平台</strong> <code>github</code></li><li><strong>涉及</strong>：<code>hexo</code> <code>模板引擎</code> <code>yml</code></li><li><strong>图片演示</strong>：<img src="/images/resume/halo.png" alt="图片演示"></li></ul><h3 id="浏览器划句播放语音脚本"><a href="#浏览器划句播放语音脚本" class="headerlink" title="浏览器划句播放语音脚本"></a>浏览器划句播放语音脚本</h3><ul><li><strong>功能介绍</strong>：划句选中后，生成语音播放按钮，可暂停，全网站通用，支持中英文；</li><li><strong>适用平台</strong>：<code>chrome</code> 浏览器</li><li><strong>涉及</strong>：<code>javascript</code></li><li><strong>图片演示</strong>：<img src="/images/resume/feature.png" alt="图片演示"></li></ul><h3 id="b站视频快捷调节倍速脚本"><a href="#b站视频快捷调节倍速脚本" class="headerlink" title="b站视频快捷调节倍速脚本"></a>b站视频快捷调节倍速脚本</h3><ul><li><strong>功能介绍</strong>：快捷键 a &#x2F; d 加减速（+-0.25）；快捷键c可输入自定义倍速（限制1-10）</li><li><strong>适用平台</strong>：<code>chrome</code> 浏览器</li><li><strong>涉及</strong>：<code>javascript</code></li><li><strong>图片演示</strong>：<img src="/images/resume/bilibili.png" alt="图片演示"></li></ul><h2 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h2><blockquote><ol><li>大屏终端项目 &gt; 2</li></ol><ul><li>技术：<code>swiper</code> <code>vue</code> <code>canvas</code> <code>gulp</code></li><li>功能：<code>数据可视化</code> <code>签名</code> <code>滑动</code> <code>轮播</code></li></ul><ol start="2"><li>小程序 &gt; 5</li></ol><ul><li>技术： <code>原生</code> <code>wepy</code> <code>uniapp</code></li><li>功能： <code>体检</code> <code>单词学习</code> <code>政务</code> <code>视频</code> <code>新闻</code></li></ul><ol start="3"><li>PC &gt; 3</li></ol><ul><li>技术：<code>vue2全家桶</code> <code>vue3</code> <code>es6</code> <code>typescipt</code> <code>websoket</code> <code>vue-cli</code> <code>royi</code> <code>ant-design</code> <code>elementui</code></li><li>功能: <code>招聘网站</code> <code>门户系统</code> <code>后台管理系统</code></li></ul><ol start="4"><li>H5 &gt; 1</li></ol><ul><li><code>vue3</code> <code>typescript</code> <code>vant</code></li><li><code>办公</code></li></ul><ol start="5"><li>微信公众号 &gt; 1</li></ol><ul><li>技术：<code>微信api</code></li><li>功能: <code>选座</code> <code>定位</code> <code>打卡</code></li></ul><ol start="6"><li>工具类开发</li></ol><ul><li>技术：<code>vue3</code> <code>typescript</code> <code>rollup</code> <code>jest</code> <code>npm 打包发布</code></li><li>功能：<code>element-ui 组件二次开发</code> <code>从 0 到 1 的常用工具类，集成单元测试</code> <code>根据目录结构自动生成插件</code></li></ul><ol start="7"><li>脚本开发</li></ol><ul><li>技术：<code>javascript</code></li><li>功能：<code>适用于谷歌浏览器全网站的划线读音工具，支持中英文</code> <code>b站视频快捷调节倍速,加减速，自定义</code></li></ul><ol start="8"><li>github 网站搭建</li></ol><ul><li>技术：<code>hexo</code> <code>模板引擎</code></li><li>功能：博客</li></ul><ol start="9"><li>其他</li></ol><ul><li>react node 有实际项目经验..</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目演示 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 项目演示 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>汇总</title>
+      <link href="/2023/03/22/BOK/"/>
+      <url>/2023/03/22/BOK/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>持续更新中…</p></blockquote><h3 id="基础设施"><a href="#基础设施" class="headerlink" title="基础设施"></a>基础设施</h3><ol><li>前端标准：W3C | SPA | DOM | BOM | JSON | JSONP | HTTP | HTML5 | CSS3</li><li>编码规范：eslint | tslint | stylelint</li><li>基础构建优化：压缩 | 校验 | 资源合并</li><li>构建工具：webpack | gulp | rollup | vite</li><li>包管理工具：Brower | npm | yarn</li><li>模块化：AMD | CMD | CommonJS | ES6 Module</li><li>CSS 预处理器: less | sass | stylus</li><li>组件化</li><li>资源管理：按需加载 | 延迟加载 | 缓存复用 | CND 部署 | 文件指纹 | 请求合并 | 异步同步加载</li></ol><h3 id="工作链"><a href="#工作链" class="headerlink" title="工作链"></a>工作链</h3><ol><li>脚手架</li><li>搭建本地开发环境</li><li>搭建本地 mock 环境</li><li>自动化构建：webpack 配置使用 | 常用插件 | webpack 构建性能优化 | babel | 模块合并 | webpack 增量更新构建 | 资源定位 | 自动刷新</li><li>单元测试</li><li>部署发布</li><li>监控：行为监控 | 异常监控 | 性能监控</li></ol><h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ol><li>chrome</li><li>postman</li><li>移动端抓包工具</li><li>微信开发者工具</li><li>vscode | hbuilder</li><li>devtools</li></ol><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><ol><li>vue &amp; vue 全家桶</li><li>react &amp; react 全家桶</li><li>ruoyi | ant-design</li><li>element | vant</li><li>uniapp | taro</li></ol><h3 id="node"><a href="#node" class="headerlink" title="node"></a>node</h3><ol><li>web 服务<ol><li>express</li><li>koa</li><li>hapi</li><li>sails</li><li>tsw</li><li>meteor</li><li>feathers</li><li>…</li></ol></li><li>模板引擎<ol><li>handlebars</li><li>ejs</li><li>jade</li></ol></li><li>单元测试<ol><li>karma</li><li>mocha</li><li>jest</li></ol></li><li>包管理<ol><li>npm</li><li>cnpm</li><li>yarn</li></ol></li><li>守护进程<ol><li>pm2</li><li>forever</li></ol></li><li>三大特定：单线程 | 非阻塞 I&#x2F;O | 事件驱动</li><li>设计模式</li><li>数据库：MySql | MongoDB</li><li>缓存：redis …</li><li>消息队列</li><li>通讯协议：网络协议 | 数据序列号协议 | 接口协议</li></ol><h3 id="暂未分类"><a href="#暂未分类" class="headerlink" title="暂未分类"></a>暂未分类</h3><ol><li>JavaScript</li><li>TypeScript</li><li>微信小程序</li><li>Webpack</li><li>Rollup</li><li>Babel</li><li>Vite</li><li>Git</li><li>GitHub</li><li>Node</li><li>Tailwind</li><li>nuxt next</li><li>地图开发</li><li>数据可视化</li><li>echats | hightchart</li><li>文件相关</li><li>微前端 </li><li>低代码</li><li>npm包</li><li>工具类库搭建</li><li>跨平台</li><li>响应式</li><li>Mock</li><li>设计模式</li><li>微信公众号开发</li><li>名词</li><li>底层原理</li><li>数据结构</li><li>登录体系</li><li>three.js</li><li>插件开发</li><li>地图开发</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端知识体系 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端知识体系 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/10/13/hello-world/"/>
+      <url>/2022/10/13/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p>healerape.github.io</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 不重要的 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
