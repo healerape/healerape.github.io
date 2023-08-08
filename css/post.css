@@ -23,6 +23,8 @@
 .toc-widget {
     width: 345px;
     padding-left: 20px;
+    max-height: 90%;
+    overflow-y: scroll;
 }
 
 .toc-widget .toc-title {
