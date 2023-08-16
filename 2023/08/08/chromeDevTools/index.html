@@ -1,0 +1,1248 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="谷歌开发者工具, OHNII">
+    <meta name="description" content="常规介绍
+按 F12 打开调试窗口
+元素（Elements）- 布局和样式
+控制台（Console）- js
+源码（Sources）- 资源，断点调试
+网络（Network）- 监控网络请求和响应
+性能（Performance）- 记录和分">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>谷歌开发者工具 | OHNII</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">OHNII</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">OHNII</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">谷歌开发者工具</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/chrome/">
+                                <span class="chip bg-color">chrome</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">工具</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/chrome/" class="post-category">
+                                chrome
+                            </a>
+                        
+                            <a href="/categories/chrome/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="常规介绍"><a href="#常规介绍" class="headerlink" title="常规介绍"></a>常规介绍</h2><ol>
+<li>按 <strong>F12</strong> 打开调试窗口</li>
+<li><strong>元素（Elements）</strong>- 布局和样式</li>
+<li><strong>控制台（Console）</strong>- js</li>
+<li><strong>源码（Sources）</strong>- 资源，断点调试</li>
+<li><strong>网络（Network）</strong>- 监控网络请求和响应</li>
+<li><strong>性能（Performance）</strong>- 记录和分析网页的性能数据</li>
+<li><strong>内存（Memory）</strong>- 内存快照</li>
+<li><strong>应用（Application）</strong>- 存储等</li>
+<li><strong>安全（Security）</strong>- 检查是否存在潜在的安全风险</li>
+<li><strong>审查元素工具（Inspect Element）</strong>- 选中元素</li>
+<li><strong>移动设备模拟器（Device Mode）</strong>- 模拟不同设备和屏幕尺寸的视图</li>
+</ol>
+<h2 id="页面元素快速调试"><a href="#页面元素快速调试" class="headerlink" title="页面元素快速调试"></a>页面元素快速调试</h2><p><img src="/images/chrome/elesel.png" alt="图片演示"></p>
+<ol>
+<li><p><strong>Add Attribute:</strong> 在标签中增加新的属性</p>
+</li>
+<li><p><strong>Edit attribute:</strong> 编辑属性</p>
+</li>
+<li><p><strong>Edit as HTML:</strong> 以HTML形式更改页面元素</p>
+</li>
+<li><p><strong>Duplicate element:</strong> 复制元素</p>
+</li>
+<li><p><strong>Delete element:</strong> 删除元素</p>
+</li>
+<li><p><strong>Cut:</strong> 剪切</p>
+</li>
+<li><p><strong>Copy:</strong> 复制</p>
+</li>
+<li><p><strong>Paste:</strong> 粘贴</p>
+</li>
+<li><p><strong>Hide element：</strong> 隐藏元素</p>
+</li>
+<li><p><strong>Force State：</strong>强制元素状态，模拟伪类状态（如:hover、:active）以查看元素在不同状态下的样式<br>  <img src="/images/chrome/elesel02.png" alt="图片演示"></p>
+</li>
+<li><p><strong>Break on：</strong> 中断选择：设置断点，使得在选中元素上发生特定事件（如点击、DOM修改等）时暂停代码执行以便进行调试。<br>  <img src="/images/chrome/elesel03.png" alt="图片演示"></p>
+</li>
+<li><p><strong>Expand recursively</strong> 递归展开</p>
+</li>
+<li><p><strong>Collapse children</strong> 折叠子元素</p>
+</li>
+<li><p><strong>Capture node screenshot</strong> 捕获节点截图</p>
+</li>
+<li><p><strong>Scroll into view</strong> 使元素滚动到视图</p>
+</li>
+<li><p><strong>Focus</strong> 聚焦，不知道咋子用</p>
+</li>
+<li><p><strong>Badge settings</strong> 不知道是啥子咋子用</p>
+</li>
+<li><p><strong>Store as global variable</strong> 存储为全局变量，将选中元素保存为一个全局JavaScript变量，以便在控制台中使用</p>
+</li>
+</ol>
+<h3 id="元素的鼠标悬停状态调试"><a href="#元素的鼠标悬停状态调试" class="headerlink" title="元素的鼠标悬停状态调试"></a>元素的鼠标悬停状态调试</h3><ol>
+<li>选中元素</li>
+<li>勾选style 中的 hover 选项，左边会出现固定标识</li>
+<li>进行 hover 状态调试<br><img src="/images/chrome/elesel04.png" alt="图片演示"></li>
+</ol>
+<h3 id="动态元素调试"><a href="#动态元素调试" class="headerlink" title="动态元素调试"></a>动态元素调试</h3><p>Break on 断点调试</p>
+<ol>
+<li><strong>Subtree Modification（中断子树修改）</strong>：当选择此选项时，在所选元素及其子元素发生DOM修改（添加、删除或修改子元素）时，代码执行会被暂停，使您可以查看和调试这些修改。</li>
+<li><strong>Attributes Modification（中断属性修改）</strong>：选中此选项后，当所选元素的属性发生变化时，代码执行会被暂停。这适用于元素属性的修改，如 class、id、style 等。</li>
+<li><strong>Node Removal（中断节点移除）</strong>：在选中此选项后，如果所选元素从 DOM 中被移除，代码执行会被暂停，允许您跟踪元素何时被移除。</li>
+</ol>
+<p><img src="/images/chrome/elesel05.png" alt="图片演示"><br><img src="/images/chrome/elesel06.png" alt="图片演示"><br><img src="/images/chrome/elesel07.png" alt="图片演示"></p>
+<h3 id="样式调试"><a href="#样式调试" class="headerlink" title="样式调试"></a>样式调试</h3><ol>
+<li>选中元素</li>
+<li><strong>Element&#x2F;Styles</strong> 基于样式或元素调试, 盒模型在 Elements&#x2F;styles最下方</li>
+<li><strong>Element&#x2F;Computed</strong> 查看元素最终样式，所有样式，每个样式后有个小箭头，点击快速跳转到 <strong>Element&#x2F;Styles</strong> 下对应的样式</li>
+</ol>
+<h3 id="元素事件监听"><a href="#元素事件监听" class="headerlink" title="元素事件监听"></a>元素事件监听</h3><ol>
+<li>选中元素</li>
+<li><strong>Element&#x2F;Event Listeners</strong> 有很多事件，比如点击事件，对应右侧有个链接，点击快速定位到<strong>Element&#x2F;Source</strong>下查看源代码</li>
+</ol>
+<h2 id="如何查看被压缩的-js-css-代码"><a href="#如何查看被压缩的-js-css-代码" class="headerlink" title="如何查看被压缩的 js css 代码"></a>如何查看被压缩的 js css 代码</h2><ol>
+<li>选中元素</li>
+<li>定位到源码</li>
+<li>下方有花括号 进行 format</li>
+<li>可直接在源码进行 js css 修改，快速生效；外部资源也可以修改，图片等静态资源也可查看保存<br><img src="/images/chrome/console01.png" alt="图片演示"></li>
+</ol>
+<h2 id="调试-js-的-callback-调用堆栈"><a href="#调试-js-的-callback-调用堆栈" class="headerlink" title="调试 js 的 callback 调用堆栈"></a>调试 js 的 callback 调用堆栈</h2><ol>
+<li>代码前加断点</li>
+<li>在右侧可以看到 call stack</li>
+</ol>
+<h2 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h2><h3 id="网络请求的监控"><a href="#网络请求的监控" class="headerlink" title="网络请求的监控"></a>网络请求的监控</h3><p><img src="/images/chrome/net01.png" alt="图片演示"><br><img src="/images/chrome/net02.png" alt="图片演示"><br>针对后面几个指标，它们的区别如下：</p>
+<ol>
+<li><strong>Finish</strong>：<br>这个指标表示页面完全加载完成所花费的时间。它包括了从开始加载到所有资源都加载完毕，所有事件都触发，以及页面的渲染和交互都准备好的时间。它代表了用户在浏览器中完整加载和交互页面所需的时间。</li>
+<li><strong>DOMContentLoaded</strong>：<br>这个指标表示从页面开始加载到DOMContentLoaded事件触发所经过的时间。DOMContentLoaded事件在DOM文档完全解析和构建后触发，这时候页面的HTML、CSS和JavaScript已经可用，可以开始进行页面的渲染和交互。通常情况下，DOMContentLoaded之前不包括外部资源的加载，如图片、样式表等。</li>
+<li><strong>Load</strong>：<br>这个指标表示从页面开始加载到Load事件触发所经过的时间。Load事件在整个页面以及所有相关资源（包括外部资源）加载完成后触发。这意味着页面的所有内容已经加载完毕，用户可以与页面进行交互。与DOMContentLoaded相比，Load事件触发后页面的渲染和交互更为完整。</li>
+</ol>
+<h3 id="监控页面重绘"><a href="#监控页面重绘" class="headerlink" title="监控页面重绘"></a>监控页面重绘</h3><p>作为页面动画和性能参考的重要指标之一，假设页面卡顿，可以看些哪些元素在动，作为参考<br>路径：右上角三个点&#x2F;More tools&#x2F;Rendering（渲染）<br><img src="/images/chrome/ele01.png" alt="图片演示"></p>
+<ol>
+<li><strong>Paint Flashing（绘制闪烁）</strong>：这个功能可以在页面上启用绘制闪烁模式，以帮助您可视化页面的绘制过程，识别哪些区域正在重新绘制。这有助于减少不必要的绘制操作，从而提高页面性能。</li>
+<li><strong>Layout Shift Regions（布局变化区域）</strong>：此功能用于可视化页面布局变化的区域。布局变化可能会导致页面内容的意外移动，影响用户体验。通过分析布局变化，您可以识别和解决可能导致视觉不稳定的问题。</li>
+<li><strong>Layer Borders（图层边框）</strong>：这个功能允许您在页面上显示图层的边界，帮助您分析页面的图层结构和合成。图层是页面中独立绘制的元素，优化图层可以提高性能。</li>
+<li><strong>Frame Rendering Stats（帧渲染统计）</strong>：此功能显示了页面的帧渲染统计信息，帮助您了解帧率、帧间隔等性能指标。高帧率对于实现流畅的用户体验至关重要。</li>
+<li><strong>Scrolling Performance Issues（滚动性能问题）</strong>：这个功能帮助您分析页面的滚动性能，识别可能导致滚动不流畅的问题，以及优化滚动体验。</li>
+<li><strong>Highlight Ad Frames（高亮广告框架）</strong>：此功能可以帮助您在页面上高亮显示广告框架，从而识别哪些区域是广告内容。</li>
+<li><strong>Core Web Vitals（核心Web性能指标）</strong>：这些是衡量用户体验的重要指标，包括Largest Contentful Paint（LCP）、First Input Delay（FID）和Cumulative Layout Shift（CLS）等。</li>
+<li><strong>Disable Local Fonts（禁用本地字体）</strong>：这个功能允许在页面上禁用本地字体，以模拟页面使用外部字体的情况。</li>
+<li><strong>Emulate a Focused Page（模拟聚焦页面）</strong>：这个功能用于模拟页面处于活动状态或不活动状态时的性能变化。</li>
+<li><strong>Enable Automatic Dark Mode（启用自动暗模式）</strong>：这个功能用于模拟页面在暗模式和亮模式之间的切换。</li>
+</ol>
+<h3 id="监控统计使用到的-js-脚本"><a href="#监控统计使用到的-js-脚本" class="headerlink" title="监控统计使用到的 js 脚本"></a>监控统计使用到的 js 脚本</h3><p>查看代码覆盖率，对于加载性能优化这块也是一个很好的指标<br>路径：右上角三个点&#x2F;More tools&#x2F;Coverage（覆盖）</p>
+<ol>
+<li>点击录制<br><img src="/images/chrome/ele02.png" alt="图片演示"></li>
+<li>比如对于js css代码（有可能在其他url用到了），对于当前页面（url）百分之多少没有使用到，红色是没有使用到的代码<br><img src="/images/chrome/ele03.png" alt="图片演示"></li>
+</ol>
+<h3 id="如何监控页面动画变更"><a href="#如何监控页面动画变更" class="headerlink" title="如何监控页面动画变更"></a>如何监控页面动画变更</h3><p>路径：右上角三个点&#x2F;More tools&#x2F;Animation（覆盖）<br>对动画变更修改调试<br><img src="/images/chrome/ele04.png" alt="图片演示"></p>
+<h3 id="如何模拟其他设备"><a href="#如何模拟其他设备" class="headerlink" title="如何模拟其他设备"></a>如何模拟其他设备</h3><p>路径：右上角三个点&#x2F;More tools&#x2F;Network conditions（网络条件）<br>网速：断网 快慢3G<br>设备：假设ios ipad</p>
+<h3 id="安卓开发"><a href="#安卓开发" class="headerlink" title="安卓开发"></a>安卓开发</h3><p>一般是用 android studio 来调试，但是谷歌浏览器下的 路径：右上角三个点&#x2F;More tools&#x2F;Remote devices 也可进行远程调试，不过这个比较少用</p>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><h3 id="快速打开一个站点的某个文件"><a href="#快速打开一个站点的某个文件" class="headerlink" title="快速打开一个站点的某个文件"></a>快速打开一个站点的某个文件</h3><p>当 source 左侧资源站点非常多的时候，找起来不方便，可以通过右侧 ctrl + p 快速定位打开这个文件<br><img src="/images/chrome/source01.png" alt="图片演示"><br><img src="/images/chrome/source02.png" alt="图片演示"></p>
+<h3 id="整个站点资源搜索"><a href="#整个站点资源搜索" class="headerlink" title="整个站点资源搜索"></a>整个站点资源搜索</h3><p>路径：右上角三个点&#x2F;More tools&#x2F;Search<br><img src="/images/chrome/source03.png" alt="图片演示"></p>
+<h2 id="如何阻止请求某些资源"><a href="#如何阻止请求某些资源" class="headerlink" title="如何阻止请求某些资源"></a>如何阻止请求某些资源</h2><p>比如阻止广告<br>路径：右上角三个点&#x2F;More tools&#x2F;Request blocking<br><img src="/images/chrome/net03.png" alt="图片演示"></p>
+<h2 id="获取传感器数据"><a href="#获取传感器数据" class="headerlink" title="获取传感器数据"></a>获取传感器数据</h2><p>比如地理信息location，比如手机横屏竖屏投影仪，触屏<br>路径：右上角三个点&#x2F;More tools&#x2F;Sensors（传感器）</p>
+<h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p>网络请求 js 动画等可能会导致性能问题<br>注意：在隐身模式下进行性能分析，才能排除插件等的干扰</p>
+<ol>
+<li>打开浏览器隐身模式</li>
+<li>打开 Perfomance 面板</li>
+<li>右上角有个设置图标<ol>
+<li>可以设置CPU，用于模拟比较不好的电脑</li>
+<li>设置网络等等</li>
+</ol>
+</li>
+<li>点击左上角进行抓取，会计算执行过程，比如执行了 n 秒后点击 stop，会有分析结果。如果通过这段时间包含了优化前和优化后的，可以进行对比。面板红色部分说明性能不好<br>  <img src="/images/chrome/per01.png" alt="图片演示"><br>  <img src="/images/chrome/per02.png" alt="图片演示"><br>概念说明：FPS 帧率：60帧就代码一秒钟内有60个画面，非常流畅，反之就很卡顿<br>  <img src="/images/chrome/per03.png" alt="图片演示"><br>  <img src="/images/chrome/per04.png" alt="图片演示"></li>
+<li>网络请求分析<br>可以看出网络请求耗时、js加载 图片 css加载耗时时长<br><img src="/images/chrome/per05.png" alt="图片演示"><br><img src="/images/chrome/per06.png" alt="图片演示"></li>
+<li>call tree 直观地看到分析结果，点击最右侧可跳转到源码<br><img src="/images/chrome/per07.png" alt="图片演示"><br><img src="/images/chrome/per08.png" alt="图片演示"></li>
+</ol>
+<h2 id="内存监控的原理和方法"><a href="#内存监控的原理和方法" class="headerlink" title="内存监控的原理和方法"></a>内存监控的原理和方法</h2><h3 id="js-堆栈模型-stack-heap"><a href="#js-堆栈模型-stack-heap" class="headerlink" title="js 堆栈模型 stack heap"></a>js 堆栈模型 stack heap</h3><ol>
+<li>值类型 - 具体值在栈中</li>
+<li>引用类型 - 地址在栈中，具体值在堆中</li>
+</ol>
+<h3 id="内存生命周期"><a href="#内存生命周期" class="headerlink" title="内存生命周期"></a>内存生命周期</h3><ol>
+<li>内存分配 -&gt; 内存使用【全局变量与局部变量】【内存回收】【注意SPA程序的内存泄露】</li>
+<li>内存泄漏</li>
+<li>内存膨胀</li>
+</ol>
+<h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><p>分配 -&gt; 使用 -&gt; 回收</p>
+<ol>
+<li>Memory 面板<br><img src="/images/chrome/memory01.png" alt="图片演示"></li>
+<li>Performents 面板中 勾选 memory</li>
+<li>任务管理器</li>
+</ol>
+<h2 id="manifest"><a href="#manifest" class="headerlink" title="manifest"></a>manifest</h2><p>描述站点基本信息，比如站点名称，图标，作者等，是一个json文件<br>路径：Application&#x2F;Manifest</p>
+<h2 id="站点-Service-Workers"><a href="#站点-Service-Workers" class="headerlink" title="站点 Service Workers"></a>站点 Service Workers</h2><h3 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h3><p>渐进式网络应用程序（Progressive Web App，PWA）是一种结合了传统网页和移动应用优点的网络应用模型。它旨在提供像移动应用一样的用户体验，包括快速加载、离线访问和推送通知等功能，同时仍然是基于Web技术开发的应用。</p>
+<ul>
+<li>https 环境部署</li>
+<li>响应式设计，一次部署，可在移动设备和 PC 设备上运行，在不同浏览器可正常访问</li>
+<li>浏览器离线和弱网环境可极速访问</li>
+<li>可以把 App Icon 入口添加到桌面</li>
+<li>点击 Icon 入口有类似 Native App 的动画效果</li>
+<li>灵活的热更新</li>
+</ul>
+<h3 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h3><p>路径：Application&#x2F;Service Worker<br>Service Worker（服务工作线程）是一种网络技术，它在网页的后台运行，与浏览器的主线程分开。它充当了可编程的代理，位于网络应用、浏览器和网络之间。Service Worker使得创建可以离线工作、快速加载并提供流畅用户体验的网络应用成为可能。它们通常用于离线缓存、推送通知和后台同步等功能。</p>
+<p>Service Worker</p>
+<ul>
+<li>后台传递</li>
+<li>网络代理、转发请求、伪造响应</li>
+<li>离线缓存</li>
+<li>消息推送</li>
+</ul>
+<p><img src="/images/chrome/server01.png" alt="图片演示"></p>
+<h3 id="Service-Worker-和-Web-Worker-区别"><a href="#Service-Worker-和-Web-Worker-区别" class="headerlink" title="Service Worker 和 Web Worker 区别"></a>Service Worker 和 Web Worker 区别</h3><ol>
+<li><strong>用途和功能：</strong><ul>
+<li><strong>Service Worker：</strong> 主要用于控制网络请求、缓存资源、实现离线访问和推送通知等功能。它可以在后台拦截和处理页面发出的网络请求，从而提高应用的性能和可靠性。Service Worker的设计目标是为了使Web应用在离线状态下仍能正常工作，以及提供更快速的加载和响应时间。</li>
+<li><strong>Web Worker：</strong> 用于在浏览器中创建多线程JavaScript环境，以执行计算密集型任务，如数据处理、图像处理等。Web Worker可以将这些任务从主页面线程中分离出来，以防止阻塞用户界面，从而提高页面的响应性。</li>
+</ul>
+</li>
+<li><strong>运行方式：</strong><ul>
+<li><strong>Service Worker：</strong> 运行在独立的线程中，与主页面线程隔离。它可以在网页关闭或不在焦点时继续运行，从而实现后台处理、离线缓存等功能。</li>
+<li><strong>Web Worker：</strong> 同样运行在独立的线程中，但它与主页面线程之间的通信是通过消息传递进行的。Web Worker不能直接访问DOM，因此它的主要用途是执行计算任务，而不是操作页面元素。</li>
+</ul>
+</li>
+<li><strong>通信机制：</strong><ul>
+<li><strong>Service Worker：</strong> 可以通过Fetch API来拦截和处理网络请求，也可以通过postMessage来与主页面进行通信。它可以在页面之间共享数据和状态。</li>
+<li><strong>Web Worker：</strong> 通信是通过postMessage进行的，主页面和Web Worker之间可以互相发送和接收消息，但消息传递会引入一些通信开销。</li>
+</ul>
+</li>
+<li><strong>适用场景：</strong><ul>
+<li><strong>Service Worker：</strong> 适用于增强Web应用的性能，实现离线访问、缓存、推送通知等。它通常用于提供更好的用户体验，尤其在网络不稳定的情况下。</li>
+<li><strong>Web Worker：</strong> 适用于执行计算密集型任务，如数据处理、图像处理、复杂计算等。它主要关注的是提高页面的响应性和性能。</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，Service Worker和Web Worker是两种不同的技术，用于不同的场景和目的。Service Worker主要关注应用的性能、离线访问和推送通知，而Web Worker则关注处理计算密集型任务并提高页面的响应性。</p>
+<h2 id="快速清空所有本地存储"><a href="#快速清空所有本地存储" class="headerlink" title="快速清空所有本地存储"></a>快速清空所有本地存储</h2><p>路径：Application&#x2F;Clear storage</p>
+<h2 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h2><p>路径：Application&#x2F;Storage<br>Loacal Storage 永久存储 &#x2F; Session Storage 会话存储</p>
+<h2 id="indexDB"><a href="#indexDB" class="headerlink" title="indexDB"></a>indexDB</h2><p>路径：Application&#x2F;Storage</p>
+<ul>
+<li>永久化存储</li>
+<li>NoSQL 数据库</li>
+<li>测试支持</li>
+</ul>
+<p>IndexedDB（Indexed Database）是一个浏览器内置的客户端数据库，用于在浏览器中存储大量结构化数据。它提供了一个异步的API，允许开发人员在客户端创建、存储和查询数据，而不需要依赖外部服务器。</p>
+<p>以下是一些IndexedDB的基本语法和示例：</p>
+<ol>
+<li><p><strong>打开数据库：</strong></p>
+<p>使用<code>indexedDB.open()</code>方法来打开或创建一个数据库。如果数据库不存在，它将被创建；如果存在，它将被打开。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> request <span class="token operator">=</span> indexedDB<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">"myDatabase"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"Error opening database:"</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>errorCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onsuccess</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> db <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Database opened successfully:"</span><span class="token punctuation">,</span> db<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onupgradeneeded</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> db <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> objectStore <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">createObjectStore</span><span class="token punctuation">(</span><span class="token string">"myObjectStore"</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">keyPath</span><span class="token operator">:</span> <span class="token string">"id"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Database upgrade needed"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p><strong>添加数据：</strong></p>
+<p>使用事务来添加数据到对象存储（Object Store）中。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> transaction <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"myObjectStore"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"readwrite"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> objectStore <span class="token operator">=</span> transaction<span class="token punctuation">.</span><span class="token function">objectStore</span><span class="token punctuation">(</span><span class="token string">"myObjectStore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"John Doe"</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">30</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> objectStore<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onsuccess</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Data added successfully"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p><strong>查询数据：</strong></p>
+<p>使用事务从对象存储中查询数据。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> transaction <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"myObjectStore"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"readonly"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> objectStore <span class="token operator">=</span> transaction<span class="token punctuation">.</span><span class="token function">objectStore</span><span class="token punctuation">(</span><span class="token string">"myObjectStore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> request <span class="token operator">=</span> objectStore<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onsuccess</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Data retrieved:"</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Data not found"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p><strong>更新数据：</strong></p>
+<p>使用事务更新对象存储中的数据。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> transaction <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"myObjectStore"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"readwrite"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> objectStore <span class="token operator">=</span> transaction<span class="token punctuation">.</span><span class="token function">objectStore</span><span class="token punctuation">(</span><span class="token string">"myObjectStore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Jane Smith"</span><span class="token punctuation">,</span> <span class="token literal-property property">age</span><span class="token operator">:</span> <span class="token number">32</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> objectStore<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onsuccess</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Data updated successfully"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre>
+</li>
+<li><p><strong>删除数据：</strong></p>
+<p>使用事务从对象存储中删除数据。</p>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> transaction <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">transaction</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"myObjectStore"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"readwrite"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> objectStore <span class="token operator">=</span> transaction<span class="token punctuation">.</span><span class="token function">objectStore</span><span class="token punctuation">(</span><span class="token string">"myObjectStore"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> request <span class="token operator">=</span> objectStore<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+request<span class="token punctuation">.</span><span class="token function-variable function">onsuccess</span> <span class="token operator">=</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Data deleted successfully"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span></code></pre></li>
+</ol>
+<p>IndexedDB还支持索引、游标、范围查询等更高级的功能。注意，IndexedDB的API是异步的，因此在操作数据库时需要使用回调或Promise来处理结果。具体看官方文档</p>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><p>路径：Application&#x2F;Storage</p>
+<h2 id="Cache"><a href="#Cache" class="headerlink" title="Cache"></a>Cache</h2><p>路径：Application&#x2F;Storage<br>主要做离线化的应用</p>
+<h2 id="快速转存站点资源"><a href="#快速转存站点资源" class="headerlink" title="快速转存站点资源"></a>快速转存站点资源</h2><p>路径：Application&#x2F;Frames - top</p>
+<ol>
+<li>Front 保存</li>
+<li>Images 保存（右键save）</li>
+<li>Script、样式、都可以保存</li>
+</ol>
+<h2 id="Security-节点"><a href="#Security-节点" class="headerlink" title="Security 节点"></a>Security 节点</h2><p>路径：Security&#x2F;Overview<br>可以查看当前站点安全状态</p>
+<h2 id="Audit"><a href="#Audit" class="headerlink" title="Audit"></a>Audit</h2><p>路径：Audit<br>用于识别和修复一些常见的问题，会给出评分和建议，主要是引起网站性能，可访问性，用户体验性的一些东西</p>
+<ul>
+<li>设备端</li>
+<li>审计条件</li>
+<li>附加条件<br><img src="/images/chrome/audit01.png" alt="图片演示"><br><img src="/images/chrome/audit02.png" alt="图片演示"><br><img src="/images/chrome/audit03.png" alt="图片演示"></li>
+</ul>
+<ol>
+<li>设备模拟</li>
+<li>性能审计</li>
+<li>控制速度，模拟CPU</li>
+<li>清缓存</li>
+</ol>
+<p>可以下载 Lighthouse 插件 进行审查</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Healerape</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://healerape.github.io/2023/08/08/chromeDevTools/">https://healerape.github.io/2023/08/08/chromeDevTools/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Healerape</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/chrome/">
+                                    <span class="chip bg-color">chrome</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">工具</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/08/08/chromeDevTools/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="谷歌开发者工具">
+                        
+                        <span class="card-title">谷歌开发者工具</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/chrome/" class="post-category">
+                                    chrome
+                                </a>
+                            
+                            <a href="/categories/chrome/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/chrome/">
+                        <span class="chip bg-color">chrome</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/08/06/chrome/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="谷歌插件开发">
+                        
+                        <span class="card-title">谷歌插件开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/chrome/" class="post-category">
+                                    chrome
+                                </a>
+                            
+                            <a href="/categories/chrome/%E6%8F%92%E4%BB%B6/" class="post-category">
+                                    插件
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/chrome/">
+                        <span class="chip bg-color">chrome</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%8F%92%E4%BB%B6/">
+                        <span class="chip bg-color">插件</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('true'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Just Do It&nbsp;&copy;<br/>
+            <span>quantitative change leads to qualitative change</span>
+
+            <!-- Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2023</span>
+            
+            <a href="/about" target="_blank">Healerape</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            
+            <br>
+             -->
+        </div>
+        <!-- <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div> -->
+        <div class="col s12 m4 l4 social-link ">Barbaric Growth</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
